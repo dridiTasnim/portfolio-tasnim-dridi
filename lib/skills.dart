@@ -40,7 +40,7 @@ class _SkillsState extends State<Skills> {
                   skill_card("images/github.png", "Github"),
                   skill_card("images/mysql.png", "MySQL"),
                   skill_card("images/postgresql (2).png", "PostgreSQL"),
-                  skill_card("images/powerBi.png", "PowerBI"),
+                  skill_card("images/PowerBiLogo.png", "PowerBI"),
                   skill_card("images/azure.png", "Microsoft Azure"),
                 ],
               ),
