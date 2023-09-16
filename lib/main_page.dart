@@ -1,9 +1,15 @@
+import 'dart:io';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:dio/dio.dart';
+import 'dart:html' as html;
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -30,24 +36,23 @@ class _MainPageState extends State<MainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 
-                  AnimatedTextKit(animatedTexts: [
-                    TyperAnimatedText(
-                      'Hello !!',
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: "Poppins",
-                        fontWeight: FontWeight.w300,
-                        fontSize: 25,
+                  AnimatedTextKit(
+                    animatedTexts: [
+                      TyperAnimatedText(
+                        'Hello !!',
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          fontFamily: "Poppins",
+                          fontWeight: FontWeight.w300,
+                          fontSize: 25,
+                        ),
+                        speed: Duration(milliseconds: 100),
                       ),
-                      speed: Duration(milliseconds: 100),
-                    ),
-                  ],
-                  repeatForever: true, 
+                    ],
+                    repeatForever: true,
                   ),
                   AnimatedTextKit(
                     animatedTexts: [
-                      
                       TyperAnimatedText(
                         "I'm Tasnim",
                         textStyle: TextStyle(
@@ -62,7 +67,6 @@ class _MainPageState extends State<MainPage> {
                   ),
                   AnimatedTextKit(
                     animatedTexts: [
-                      
                       TyperAnimatedText(
                         "Dridi",
                         textStyle: TextStyle(
@@ -95,7 +99,9 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.white,
                           ), // GitHub icon
                           onPressed: () {
-                            // Handle GitHub button press
+                            final url =
+                                Uri.parse("https://github.com/dridiTasnim");
+                            launchUrl(url);
                           },
                         ),
                         IconButton(
@@ -105,7 +111,9 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.white,
                           ), // LinkedIn icon
                           onPressed: () {
-                            // Handle LinkedIn button press
+                            final url = Uri.parse(
+                                "https://www.linkedin.com/in/tasnim-dridi/");
+                            launchUrl(url);
                           },
                         ),
                         IconButton(
@@ -115,7 +123,10 @@ class _MainPageState extends State<MainPage> {
                             color: Colors.white,
                           ), // Email icon
                           onPressed: () {
-                            // Handle Email button press
+                            String email = Uri.encodeComponent(
+                                "tasnim.dridi@insat.ucar.tn");
+                            Uri mail = Uri.parse("mailto:$email");
+                            launchUrl(mail);
                           },
                         ),
                       ],
@@ -124,7 +135,9 @@ class _MainPageState extends State<MainPage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 40.0),
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          downloadAndOpenLocalPDF();
+                        },
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.all(16),
                           shape: RoundedRectangleBorder(
@@ -160,5 +173,13 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
     );
+  }
+
+  void downloadAndOpenLocalPDF() async {
+    final String pdfUrl = 'resume- Tasnim Dridi.pdf';
+    final html.AnchorElement anchor = html.AnchorElement(href: pdfUrl)
+      ..target = 'webdownload'
+      ..download = 'resume- Tasnim Dridi.pdf';
+    anchor.click();
   }
 }

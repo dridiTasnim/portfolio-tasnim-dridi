@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/about_me.dart';
+import 'package:portfolio/contact_me.dart';
 import 'package:portfolio/main_page.dart';
+import 'package:portfolio/portfolio.dart';
 import 'package:portfolio/skills.dart';
 
 void main() {
@@ -30,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   List on_pressed = [false, false, false, false, false];
   final PageController pageController = PageController();
-  final List<Widget> pages = [MainPage(), AboutMe(),Skills(),Skills(),Skills()];
+  final List<Widget> pages = [MainPage(), AboutMe(),Skills(),Portfolio(),ContactMe()];
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
