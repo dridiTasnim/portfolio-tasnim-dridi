@@ -187,6 +187,7 @@ class _MainPageState extends State<MainPage> {
                   )
                 : SingleChildScrollView(
                     scrollDirection: Axis.vertical,
+                     physics: BouncingScrollPhysics(),
                     controller: scroll_controller,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,

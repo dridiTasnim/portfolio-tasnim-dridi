@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/about_me.dart';
@@ -267,6 +268,7 @@ class _MyHomePageState extends State<MyHomePage> {
             body: PageView.builder(
               controller: pageController,
               scrollDirection: Axis.vertical,
+              dragStartBehavior: DragStartBehavior.down,
               itemCount: pages.length,
               onPageChanged: (index) {
                 setState(() {
@@ -275,7 +277,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 });
               },
               itemBuilder: (context, index) {
-                return pages[index];
+                return Container(
+                  width: screenWidth,
+                  height: screenHeight,
+                  child: pages[index]);
               },
             ))
         : Scaffold(

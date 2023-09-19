@@ -27,6 +27,7 @@ class _AboutMeState extends State<AboutMe> {
       backgroundColor: Color.fromARGB(255, 88, 112, 147).withOpacity(0.96),
       body: SingleChildScrollView(
         controller: scroll_controller,
+         physics: BouncingScrollPhysics(),
         child: screenWidth > 850
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

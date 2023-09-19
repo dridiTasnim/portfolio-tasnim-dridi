@@ -30,6 +30,7 @@ class _PortfolioState extends State<Portfolio> {
       ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
       child: SingleChildScrollView(
         controller: scroll_controller,
+         physics: BouncingScrollPhysics(),
           child: Column(
         crossAxisAlignment: MediaQuery.of(context).size.width > 850
             ? CrossAxisAlignment.start
@@ -148,6 +149,7 @@ class _PortfolioState extends State<Portfolio> {
                   fontSize: 30),
             ),
           ),
+          screenHeight<screenWidth?
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             certification_card(
                 " CCNA training ", "Introduction to Networks in March 2021"),
@@ -157,7 +159,29 @@ class _PortfolioState extends State<Portfolio> {
                 "Python Fundamentals course on DataCamp"),
             certification_card(" Deep Learning ",
                 " Deep Learning Specialization by DeepLearning.AI"),
-          ]),
+          ]) : Column(
+            children : [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  
+            certification_card(
+                " CCNA training ", "Introduction to Networks in March 2021"),
+            certification_card(" Machine Learning ",
+                "Machine Learning track certification on Qwiklabs by Google"),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+            certification_card(" Python Fundamentals ",
+                "Python Fundamentals course on DataCamp"),
+            certification_card(" Deep Learning ",
+                " Deep Learning Specialization by DeepLearning.AI"),
+                ],
+              ),
+            ]
+          ),
         ],
       )),
     ));
@@ -245,8 +269,8 @@ class _PortfolioState extends State<Portfolio> {
 
   certification_card(title, description) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height / 4,
-      width: MediaQuery.of(context).size.width * 0.2,
+      height:   MediaQuery.of(context).size.height / 4  ,
+      width: MediaQuery.of(context).size.height< MediaQuery.of(context).size.width? MediaQuery.of(context).size.width * 0.2 : MediaQuery.of(context).size.width*0.35,
       child: Card(
         color: Color.fromARGB(179, 255, 253, 253),
         elevation: 20,

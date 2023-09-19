@@ -212,6 +212,7 @@ class _ContactMeState extends State<ContactMe> {
                 ])
           : SingleChildScrollView(
             controller: scroll_controller,
+             physics: BouncingScrollPhysics(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
