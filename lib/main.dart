@@ -267,8 +267,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 )),
             body: PageView.builder(
               controller: pageController,
-              scrollDirection: Axis.horizontal,
-              dragStartBehavior: DragStartBehavior.down,
+              scrollDirection: Axis.vertical,
               itemCount: pages.length,
               onPageChanged: (index) {
                 setState(() {
@@ -445,8 +444,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 )),
             body: PageView.builder(
               allowImplicitScrolling: true,
-              controller: pageController,
               scrollDirection: Axis.vertical,
+              dragStartBehavior: DragStartBehavior.down,
+              controller: pageController,
               itemCount: pages.length,
               onPageChanged: (index) {
                 setState(() {
@@ -455,7 +455,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 });
               },
               itemBuilder: (context, index) {
-                return pages[index];
+                return Container(
+                  width: screenWidth,
+                  height: screenHeight,
+                  child: pages[index]);
               },
             ));
   }
