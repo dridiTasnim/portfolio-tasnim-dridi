@@ -267,7 +267,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 )),
             body: PageView.builder(
               controller: pageController,
-              scrollDirection: Axis.vertical,
+              scrollDirection: Axis.horizontal,
               dragStartBehavior: DragStartBehavior.down,
               itemCount: pages.length,
               onPageChanged: (index) {
