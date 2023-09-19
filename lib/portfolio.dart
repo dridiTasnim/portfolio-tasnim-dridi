@@ -192,7 +192,7 @@ class _PortfolioState extends State<Portfolio> {
       height: MediaQuery.of(context).size.width > 850
           ? MediaQuery.of(context).size.height / 3
           : MediaQuery.of(context).size.height * 0.4,
-      width: MediaQuery.of(context).size.height<MediaQuery.of(context).size.width?MediaQuery.of(context).size.width * 0.3 :MediaQuery.of(context).size.width*0.45,
+      width: MediaQuery.of(context).size.height<MediaQuery.of(context).size.width?MediaQuery.of(context).size.width * 0.3 :MediaQuery.of(context).size.width*0.48,
       child: Card(
         color: Color.fromARGB(179, 255, 253, 253),
         elevation: 20,

@@ -18,11 +18,13 @@ class _AboutMeState extends State<AboutMe> {
     'images/me.jpg',
     'images/club.jpg'
   ];
+  
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     ScrollController scroll_controller = ScrollController();
+    SwiperController swiper_controller = SwiperController();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 88, 112, 147).withOpacity(0.96),
       body: SingleChildScrollView(
@@ -226,6 +228,8 @@ class _AboutMeState extends State<AboutMe> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Swiper(
+                      controller: swiper_controller,
+                      autoplay: true,
                       itemCount: imageAssets.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Image.asset(
