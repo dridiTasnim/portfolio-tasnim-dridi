@@ -17,6 +17,7 @@ class _ContactMeState extends State<ContactMe> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    ScrollController scroll_controller = ScrollController();
     return Scaffold(
         //backgroundColor: Color(0xFF1D1414).withOpacity(0.96),
         body: Container(
@@ -210,6 +211,7 @@ class _ContactMeState extends State<ContactMe> {
                   ),
                 ])
           : SingleChildScrollView(
+            controller: scroll_controller,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

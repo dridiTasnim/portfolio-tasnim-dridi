@@ -14,6 +14,7 @@ class _PortfolioState extends State<Portfolio> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    ScrollController scroll_controller = ScrollController();
     return Scaffold(
         //backgroundColor: Color(0xFF1D1414).withOpacity(0.9),
         body: Container(
@@ -28,6 +29,7 @@ class _PortfolioState extends State<Portfolio> {
         Color.fromARGB(255, 50, 35, 35).withOpacity(0.96)
       ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
       child: SingleChildScrollView(
+        controller: scroll_controller,
           child: Column(
         crossAxisAlignment: MediaQuery.of(context).size.width > 850
             ? CrossAxisAlignment.start

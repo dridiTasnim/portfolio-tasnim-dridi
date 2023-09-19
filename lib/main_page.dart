@@ -16,6 +16,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    ScrollController scroll_controller = ScrollController();
     return Scaffold(
         // backgroundColor: Color.fromARGB(255, 88, 112, 147).withOpacity(0.96),//Color(0xFF1D1414).withOpacity(0.96),
         body: Container(
@@ -186,6 +187,7 @@ class _MainPageState extends State<MainPage> {
                   )
                 : SingleChildScrollView(
                     scrollDirection: Axis.vertical,
+                    controller: scroll_controller,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.center,

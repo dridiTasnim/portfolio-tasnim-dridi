@@ -22,9 +22,11 @@ class _AboutMeState extends State<AboutMe> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    ScrollController scroll_controller = ScrollController();
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 88, 112, 147).withOpacity(0.96),
       body: SingleChildScrollView(
+        controller: scroll_controller,
         child: screenWidth > 850
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
