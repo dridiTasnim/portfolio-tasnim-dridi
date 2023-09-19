@@ -444,7 +444,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 )),
             body: PageView.builder(
               allowImplicitScrolling: true,
-              scrollDirection: Axis.vertical,
+              scrollDirection: Axis.horizontal,
               dragStartBehavior: DragStartBehavior.down,
               controller: pageController,
               itemCount: pages.length,
