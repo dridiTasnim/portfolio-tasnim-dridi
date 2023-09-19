@@ -15,19 +15,19 @@ class _SkillsState extends State<Skills> {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Color(0xFF1D1414).withOpacity(0.9),
+        backgroundColor: Color.fromARGB(255, 88, 112, 147).withOpacity(0.96),//Color(0xFF1D1414).withOpacity(0.9),
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: MediaQuery.of(context).size.width > 850 ?CrossAxisAlignment.start : CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 50.0, left: 50, bottom: 20),
+              padding: const EdgeInsets.only(top: 50.0, left: 50,right: 50, bottom: 20),
               child: Text(
                 "Skills",
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w600,
-                    fontSize: 60),
+                    fontSize: MediaQuery.of(context).size.width > 850? 60: 50),
               ),
             ),
             Padding(
@@ -74,7 +74,7 @@ class _SkillsState extends State<Skills> {
           width: MediaQuery.of(context).size.width * 0.12,
           height: MediaQuery.of(context).size.height * 0.12,
           child: Card(
-            color: Color.fromARGB(179, 197, 89, 89),
+            color: Color.fromARGB(255, 150, 121, 187).withOpacity(0.7),//Color.fromARGB(179, 197, 89, 89),
             elevation: 6,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12.0),
@@ -83,7 +83,7 @@ class _SkillsState extends State<Skills> {
             child: Center(
                 child: Image.asset(
               images_name,
-              fit: BoxFit.contain,
+              fit: BoxFit.scaleDown,
             )),
           ),
         ),
@@ -94,7 +94,7 @@ class _SkillsState extends State<Skills> {
             style: TextStyle(
                 fontFamily: "Poppins",
                 fontWeight: FontWeight.w300,
-                fontSize: 14,
+                fontSize: MediaQuery.of(context).size.width > 850?14:10,
                 color: Colors.white),
           ),
         )
