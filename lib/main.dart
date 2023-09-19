@@ -309,8 +309,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 curve: Curves
                                     .easeInOut, // Adjust the curve as needed
                               );
-                              print(on_pressed);
-                            })
+                              Navigator.pop(context);
+                            }), 
                           }),
                   ListTile(
                       title: Text(
@@ -335,7 +335,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 curve: Curves
                                     .easeInOut, // Adjust the curve as needed
                               );
-                              print(on_pressed);
+                              Navigator.pop(context);
                             })
                           }),
                   ListTile(
@@ -361,7 +361,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 curve: Curves
                                     .easeInOut, // Adjust the curve as needed
                               );
-                              print(on_pressed);
+                              Navigator.pop(context);
                             })
                           }),
                   ListTile(
@@ -387,7 +387,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 curve: Curves
                                     .easeInOut, // Adjust the curve as needed
                               );
-                              print(on_pressed);
+                              Navigator.pop(context);
                             })
                           }),
                   ListTile(
@@ -413,7 +413,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 curve: Curves
                                     .easeInOut, // Adjust the curve as needed
                               );
-                              print(on_pressed);
+                              Navigator.pop(context);
                             })
                           }),
                 ],
@@ -439,6 +439,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 )),
             body: PageView.builder(
+              allowImplicitScrolling: true,
               controller: pageController,
               scrollDirection: Axis.vertical,
               itemCount: pages.length,

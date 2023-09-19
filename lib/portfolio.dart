@@ -56,7 +56,7 @@ class _PortfolioState extends State<Portfolio> {
                   fontSize: 30),
             ),
           ),
-          Padding(
+          screenHeight<screenWidth? Padding(
             padding: const EdgeInsets.all(10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -73,6 +73,30 @@ class _PortfolioState extends State<Portfolio> {
                     "Human Activity Recognition- Distracted Driver detection",
                     "recognize the activity of the driver to know if it is safe-driving or unsafe",
                     "Tensorflow, Flask, Python"),
+              ],
+            ),
+          ) : Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    porject_card(
+                        "Web application for film recommendation",
+                        "Search for movies and see the cast, reviews and other details, wishList management and recommendation system using GPT API.",
+                        "Flutter, NestJs, bloc for state management"),
+                    porject_card(
+                        "Vote Application",
+                        "Design and implementation of a secure voting system with fingerprint.",
+                        "Flutter, Figma, Firebase"),
+                  
+                  ],
+                ),
+                  porject_card(
+                        "Human Activity Recognition- Distracted Driver detection",
+                        "recognize the activity of the driver to know if it is safe-driving or unsafe",
+                        "Tensorflow, Flask, Python"),
               ],
             ),
           ),
@@ -142,7 +166,7 @@ class _PortfolioState extends State<Portfolio> {
       height: MediaQuery.of(context).size.width > 850
           ? MediaQuery.of(context).size.height / 3
           : MediaQuery.of(context).size.height * 0.4,
-      width: MediaQuery.of(context).size.width * 0.3,
+      width: MediaQuery.of(context).size.height<MediaQuery.of(context).size.width?MediaQuery.of(context).size.width * 0.3 :MediaQuery.of(context).size.width*0.45,
       child: Card(
         color: Color.fromARGB(179, 255, 253, 253),
         elevation: 20,

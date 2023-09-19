@@ -201,7 +201,7 @@ class _MainPageState extends State<MainPage> {
                                   color: Colors.white,
                                   fontFamily: "Poppins",
                                   fontWeight: FontWeight.w300,
-                                  fontSize: screenWidth * 0.03,
+                                  fontSize: screenWidth * 0.05,
                                 ),
                                 speed: Duration(milliseconds: 100),
                               ),

@@ -251,7 +251,7 @@ class _ContactMeState extends State<ContactMe> {
                             color: Colors.white,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w300,
-                            fontSize: 22,
+                            fontSize: 16,
                           ),
                         ),
                       )
@@ -283,7 +283,7 @@ class _ContactMeState extends State<ContactMe> {
                                 color: Colors.white,
                                 fontFamily: "Poppins",
                                 fontWeight: FontWeight.w300,
-                                fontSize: 22)),
+                                fontSize: 16)),
                       )
                     ],
                   ),
@@ -313,7 +313,7 @@ class _ContactMeState extends State<ContactMe> {
                             color: Colors.white,
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w300,
-                            fontSize: 22,
+                            fontSize: 16,
                           ),
                         ),
                       )
@@ -338,7 +338,7 @@ class _ContactMeState extends State<ContactMe> {
                               color: Colors.white,
                               fontFamily: "Poppins",
                               fontWeight: FontWeight.w300,
-                              fontSize: 22))
+                              fontSize: 16))
                     ],
                   ),
                   SizedBox(
@@ -361,7 +361,7 @@ class _ContactMeState extends State<ContactMe> {
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: "Poppins",
-                            fontSize: 20),
+                            fontSize: 12),
                       )),
                   SizedBox(height: 20,),
                   TextButton(
@@ -384,7 +384,7 @@ class _ContactMeState extends State<ContactMe> {
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: "Poppins",
-                            fontSize: 20),
+                            fontSize: 12),
                       ))
                 ],
               ),
