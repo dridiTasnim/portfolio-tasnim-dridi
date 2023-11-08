@@ -96,9 +96,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   0,
                                   duration: Duration(
                                       milliseconds:
-                                          500), // Adjust the duration as needed
+                                          500), 
                                   curve: Curves
-                                      .easeInOut, // Adjust the curve as needed
+                                      .easeInOut, 
                                 );
                                 print(on_pressed);
                               })
@@ -135,9 +135,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   1,
                                   duration: Duration(
                                       milliseconds:
-                                          500), // Adjust the duration as needed
+                                          500), 
                                   curve: Curves
-                                      .easeInOut, // Adjust the curve as needed
+                                      .easeInOut,
                                 );
                                 print(on_pressed);
                               })
@@ -174,9 +174,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   2,
                                   duration: Duration(
                                       milliseconds:
-                                          500), // Adjust the duration as needed
+                                          500), 
                                   curve: Curves
-                                      .easeInOut, // Adjust the curve as needed
+                                      .easeInOut, 
                                 );
                                 print(on_pressed);
                               })
@@ -213,9 +213,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   3,
                                   duration: Duration(
                                       milliseconds:
-                                          500), // Adjust the duration as needed
+                                          500),
                                   curve: Curves
-                                      .easeInOut, // Adjust the curve as needed
+                                      .easeInOut, 
                                 );
                                 print(on_pressed);
                               })
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 padding: EdgeInsets.all(16),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(
-                                      10), // Adjust the border radius
+                                      10), 
                                 ),
                                 backgroundColor: Colors.transparent,
                                 shadowColor: Colors.transparent,
@@ -252,9 +252,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                   4,
                                   duration: Duration(
                                       milliseconds:
-                                          500), // Adjust the duration as needed
+                                          500), 
                                   curve: Curves
-                                      .easeInOut, // Adjust the curve as needed
+                                      .easeInOut, 
                                 );
                                 print(on_pressed);
                               })

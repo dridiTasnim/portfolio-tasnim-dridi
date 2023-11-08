@@ -397,7 +397,7 @@ class _ContactMeState extends State<ContactMe> {
 
   void downloadAndOpenLocalPDF() async {
     final String cloudPdfUrl =
-        'https://drive.google.com/file/d/1cC8DAHru-gXaTztNilPrmjuyQLiYzmFe/view?usp=sharing';
+        'https://drive.google.com/file/d/1K5TH3AKbxCZc5ljZ9TvbUqw_54Xe-5aK/view?usp=sharing';
     //final String pdfUrl = 'resume- Tasnim Dridi.pdf';
     final html.AnchorElement anchor = html.AnchorElement(href: cloudPdfUrl)
       ..target = 'webdownload'
